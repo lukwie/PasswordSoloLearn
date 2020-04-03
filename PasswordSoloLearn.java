@@ -16,7 +16,7 @@ public class PasswordSoloLearn {
 		int signs = 0;
 		int len = in.length;
 
-		System.out.println("len: " + len);
+//		System.out.println("len: " + len);
 
 		for (char i : in) {
 			if (i >= '0' && i <= '9') {
@@ -29,6 +29,16 @@ public class PasswordSoloLearn {
 				signs++;
 			}
 		}
-		System.out.println("letters: " + letters + " numbers: " + numbers + " signs: " + signs);
+//		System.out.println("letters: " + letters + " numbers: " + numbers + " signs: " + signs);
+
+		String output = "";
+		if (len >=7 && numbers >= 2 && signs >= 2) {
+			output += "Strong";
+	}
+		else {
+			output += "Weak";
+}
+
+		System.out.println(output);
 	}
 }
